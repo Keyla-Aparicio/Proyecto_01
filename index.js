@@ -59,6 +59,27 @@ const runComparison = () => {
     })
 }
 
+const movieDetailsovieTemplate = (movieDetails) => {
+    //Transformar a numeros los strings que llegan de los datos
+    const dollars = parseInt(movieDetails.BoxOffice.replace(/\$/g, '').replace(/,/g, ''))
+    console.log(dollars)
+    const metascore = parseInt(movieDetails.Metascore)
+    const imdbRating = parseFloat(movieDetails.imdbRating)
+    const imdbVotes = parseInt(movieDetails.imdbVotes.replace(/,/g, ''))
+    console.log(metascore, imdbRating, imdbVotes)
+    const awards = movieDetails.Awards.split('').reduce((prev, word) => {
+        const value = parseInt(word)
+
+        if(isNaN(value)){
+            return prev
+        }else{
+            return prev + value
+        }
+        }, 0)
+        console.log('Awards', award)
+    }
+
+
 // fechData()
 const root = document.querySelector('.autocomplete')
 root.innerHTML = `
