@@ -79,6 +79,47 @@ const movieDetailsovieTemplate = (movieDetails) => {
         console.log('Awards', award)
     }
 
+    //
+{
+    return `
+        <article class="media">
+    <figure class="media-left">
+        <p class="image">
+            <img src="${movieDetails.Poster}"/>
+            </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <h1>${movieDetails.Title}</h1>
+                    <h4>${movieDetails.Genre}</h4>
+                    <P>${movieDetails.Plot}</P>
+                    </div>
+                    </div>
+                    </article>
+                    <article data-values=${awards} class="notification is-primary">
+                        <p class="title">${movieDetail.Awards}</p>
+                        <p class="subtitle">Awards</p>
+                    </article>
+                    <article data-values=${dollars} class="notification is-primary">
+                        <p class="title">${movieDetail.BoxOffice}</p>
+                        <p class="subtitle">Box Office</p>
+                    </article>
+                    <article data-values=${metascore} class="notification is-primary">
+                        <p class="title">${movieDetail.Metascore}</p>
+                        <p class="subtitle">MetasCore</p>
+                    </article>
+                    <article data-values=${imdbRating} class="notification is-primary">
+                        <p class="title">${movieDetail.imdbRating}</p>
+                        <p class="subtitle">IMDB Rating</p>
+                    </article>
+                    <article data-values=${imdbVotes} class="notification is-primary">
+                    <p class="title">${movieDetail.imdbVotes}</p>
+                    <p class="subtitle">IMDB Votes</p>
+
+                </article>
+                    
+                `
+}
 
 // fechData()
 const root = document.querySelector('.autocomplete')
